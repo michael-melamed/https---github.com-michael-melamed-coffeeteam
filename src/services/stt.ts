@@ -10,8 +10,8 @@ class STTService {
     private isRecording = false;
     private transcriptCallbacks: TranscriptCallback[] = [];
     private errorCallbacks: ErrorCallback[] = [];
-    private silenceTimer: NodeJS.Timeout | null = null;
-    private maxRecordingTimer: NodeJS.Timeout | null = null;
+    private silenceTimer: number | null = null;
+    private maxRecordingTimer: number | null = null;
 
     constructor() {
         if (this.isSupported()) {

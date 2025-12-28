@@ -17,7 +17,7 @@ export default function SendSlider({ onSend, disabled = false }: SendSliderProps
 
     const THRESHOLD = 0.8; // 80% of width
 
-    const handleStart = (clientX: number) => {
+    const handleStart = () => {
         if (disabled) return;
         setIsDragging(true);
     };
@@ -52,11 +52,17 @@ export default function SendSlider({ onSend, disabled = false }: SendSliderProps
         }
     };
 
-    const handleMouseDown = (e: React.MouseEvent) => handleStart(e.clientX);
+    const handleMouseDown = (e: React.MouseEvent) => {
+        handleStart();
+        handleMove(e.clientX);
+    };
     const handleMouseMove = (e: React.MouseEvent) => handleMove(e.clientX);
     const handleMouseUp = () => handleEnd();
 
-    const handleTouchStart = (e: React.TouchEvent) => handleStart(e.touches[0].clientX);
+    const handleTouchStart = (e: React.TouchEvent) => {
+        handleStart();
+        handleMove(e.touches[0].clientX);
+    };
     const handleTouchMove = (e: React.TouchEvent) => handleMove(e.touches[0].clientX);
     const handleTouchEnd = () => handleEnd();
 

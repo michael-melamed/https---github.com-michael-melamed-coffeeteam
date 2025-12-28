@@ -14,7 +14,7 @@ interface BlockCardProps {
 
 export default function BlockCard({ block, onEdit, onDelete }: BlockCardProps) {
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
-    const [longPressTimer, setLongPressTimer] = useState<NodeJS.Timeout | null>(null);
+    const [longPressTimer, setLongPressTimer] = useState<number | null>(null);
 
     const getDrinkEmoji = (drink: string): string => {
         if (drink.includes('הפוך') || drink.includes('קפה')) return '☕';

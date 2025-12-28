@@ -7,7 +7,7 @@ import { io, Socket } from 'socket.io-client';
 import { P2PMessage, MessageType, Peer as PeerInfo, Order } from '../types';
 
 // Use environment variable or default to localhost
-const SIGNALING_SERVER = import.meta.env.VITE_SIGNALING_SERVER || 'http://localhost:3001';
+const SIGNALING_SERVER = (import.meta as any).env?.VITE_SIGNALING_SERVER || 'http://localhost:3001';
 
 console.log('[P2P] Signaling server:', SIGNALING_SERVER);
 

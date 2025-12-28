@@ -7,7 +7,7 @@ import { useAppContext } from '../context/AppContext';
 import { AppState, UserRole, generateUUID, isValidUserName } from '../types';
 
 export default function SetupScreen() {
-    const { state, dispatch } = useAppContext();
+    const { dispatch } = useAppContext();
     const [step, setStep] = useState<1 | 2>(1);
     const [name, setName] = useState('');
     const [error, setError] = useState('');

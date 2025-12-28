@@ -3,7 +3,7 @@
 // ============================================================================
 
 import { useState } from 'react';
-import { Block, generateUUID } from '../../types';
+import { Block } from '../../types';
 import { X } from 'lucide-react';
 
 interface BlockEditModalProps {
@@ -54,8 +54,8 @@ export default function BlockEditModal({ block, onSave, onCancel }: BlockEditMod
                                     key={drink}
                                     onClick={() => setEditedBlock({ ...editedBlock, drink })}
                                     className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap ${editedBlock.drink === drink
-                                            ? 'bg-amber-500 text-white'
-                                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                                        ? 'bg-amber-500 text-white'
+                                        : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                                         }`}
                                 >
                                     {drink}
@@ -73,8 +73,8 @@ export default function BlockEditModal({ block, onSave, onCancel }: BlockEditMod
                                     key={size}
                                     onClick={() => setEditedBlock({ ...editedBlock, size })}
                                     className={`py-3 rounded-lg font-medium ${editedBlock.size === size
-                                            ? 'bg-amber-500 text-white'
-                                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                                        ? 'bg-amber-500 text-white'
+                                        : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                                         }`}
                                 >
                                     {size}
@@ -92,8 +92,8 @@ export default function BlockEditModal({ block, onSave, onCancel }: BlockEditMod
                                     key={milk}
                                     onClick={() => setEditedBlock({ ...editedBlock, milk })}
                                     className={`py-3 rounded-lg font-medium text-sm ${editedBlock.milk === milk
-                                            ? 'bg-amber-500 text-white'
-                                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                                        ? 'bg-amber-500 text-white'
+                                        : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                                         }`}
                                 >
                                     {milk}
@@ -111,8 +111,8 @@ export default function BlockEditModal({ block, onSave, onCancel }: BlockEditMod
                                     key={temp}
                                     onClick={() => setEditedBlock({ ...editedBlock, temperature: temp })}
                                     className={`py-3 rounded-lg font-medium ${editedBlock.temperature === temp
-                                            ? 'bg-amber-500 text-white'
-                                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                                        ? 'bg-amber-500 text-white'
+                                        : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                                         }`}
                                 >
                                     {temp}
@@ -130,8 +130,8 @@ export default function BlockEditModal({ block, onSave, onCancel }: BlockEditMod
                                     key={strength}
                                     onClick={() => setEditedBlock({ ...editedBlock, strength })}
                                     className={`py-3 rounded-lg font-medium ${editedBlock.strength === strength
-                                            ? 'bg-amber-500 text-white'
-                                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                                        ? 'bg-amber-500 text-white'
+                                        : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                                         }`}
                                 >
                                     {strength}
@@ -149,8 +149,8 @@ export default function BlockEditModal({ block, onSave, onCancel }: BlockEditMod
                                     key={extra}
                                     onClick={() => toggleExtra(extra)}
                                     className={`py-2 rounded-lg font-medium text-sm ${editedBlock.extras.includes(extra)
-                                            ? 'bg-amber-500 text-white'
-                                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                                        ? 'bg-amber-500 text-white'
+                                        : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                                         }`}
                                 >
                                     {extra}

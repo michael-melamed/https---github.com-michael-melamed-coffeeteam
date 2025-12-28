@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useAppContext } from '../context/AppContext';
-import { Block, generateUUID, Order, OrderStatus, MessageType } from '../types';
+import { Block, generateUUID, Order, OrderStatus } from '../types';
 import { sttService } from '../services/stt';
 import { parseOrder } from '../services/nlp';
-import { saveUser, saveOrders, getMasterCounter, setMasterCounter } from '../services/storage';
+import { saveOrders, getMasterCounter, setMasterCounter } from '../services/storage';
 import { p2pService } from '../services/p2p';
 import MicButton from '../components/cashier/MicButton';
 import BlockCard from '../components/cashier/BlockCard';

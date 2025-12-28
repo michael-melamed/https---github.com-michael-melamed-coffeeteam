@@ -4,7 +4,7 @@
 
 import { useState } from 'react';
 import { Order, OrderStatus } from '../../types';
-import { Clock, User, CheckCircle2 } from 'lucide-react';
+import { Clock, User } from 'lucide-react';
 
 interface OrderCardProps {
     order: Order;
@@ -14,7 +14,7 @@ interface OrderCardProps {
 
 export default function OrderCard({ order, onStatusChange, onCancel }: OrderCardProps) {
     const [showCancelConfirm, setShowCancelConfirm] = useState(false);
-    const [longPressTimer, setLongPressTimer] = useState<NodeJS.Timeout | null>(null);
+    const [longPressTimer, setLongPressTimer] = useState<number | null>(null);
 
     const getStatusColor = (status: OrderStatus): string => {
         switch (status) {
@@ -118,7 +118,7 @@ export default function OrderCard({ order, onStatusChange, onCancel }: OrderCard
 
                 {/* Body - Blocks */}
                 <div className="px-4 py-3 space-y-2">
-                    {order.blocks.map((block, index) => (
+                    {order.blocks.map((block) => (
                         <div key={block.id} className="flex items-start gap-2 text-sm">
                             <span className="text-lg">{getDrinkEmoji(block.drink)}</span>
                             <div className="flex-1">
